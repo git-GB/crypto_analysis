@@ -1,6 +1,6 @@
 # **ANALYSIS OF MY PERSONAL CRYPTO PORTFOLIO:-**
 My current potfolio includes ETH, DOGE, EOS, ADA, BTC, XRP
-
+____________________________________________________________________________________________________________________________________________________________________
 
 ### **FILES IN THE FOLDER:-**
 
@@ -12,9 +12,10 @@ My current potfolio includes ETH, DOGE, EOS, ADA, BTC, XRP
 * **final_analysis** - *This is the script containing the analysis*
 
 * **full_file** - *This is the main python script that will combine all the other scripts*
-
+____________________________________________________________________________________________________________________________________________________________________
 ### **TASK LIST** -
 - [x] importing and cleaning
 - [ ] Analysis
 - [ ] Prediction
 - [ ] developing a dashboard/app (*prototype*)
+____________________________________________________________________________________________________________________________________________________________________
