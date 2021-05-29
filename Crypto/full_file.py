@@ -116,16 +116,38 @@ combined_prices= reduce(lambda  left,right: pd.merge(left,right,on=['date'],
                                             how='outer'), crypto_list)
 combined_prices.head(5)
 
+#creating a plot for percentage Change
+plt.figure(figsize = (20,10))
+plt.bar(combined_prices.date,combined_prices.btc_pct_chng)
+plt.bar(combined_prices.date,combined_prices.eth_pct_chng)
+plt.bar(combined_prices.date,combined_prices.ada_pct_chng)
+plt.bar(combined_prices.date,combined_prices.xrp_pct_chng)
+plt.bar(combined_prices.date,combined_prices.doge_pct_chng)
+plt.legend(['Bitcoin','Etherium','Cardano','Ripple','Doge'])
+plt.title('Crypto currency percentage Change')
 
+#creating a plot for volume
+plt.figure(figsize = (20,10))
+plt.bar(combined_prices.date,combined_prices.btc_vol)
+plt.bar(combined_prices.date,combined_prices.eth_vol)
+plt.bar(combined_prices.date,combined_prices.ada_vol)
+plt.bar(combined_prices.date,combined_prices.xrp_vol)
+plt.bar(combined_prices.date,combined_prices.doge_vol)
+plt.yscale('log')
+plt.legend(['Bitcoin','Etherium','Cardano','Ripple','Doge'])
+plt.title('Crypto currency volumes')
 
 #creating plot to compare closing prices
+plt.figure(figsize = (20,10))
 plt.plot(combined_prices.date,combined_prices.btc_price)
 plt.plot(combined_prices.date,combined_prices.eth_price)
 plt.plot(combined_prices.date,combined_prices.ada_price)
 plt.plot(combined_prices.date,combined_prices.xrp_price)
 plt.plot(combined_prices.date,combined_prices.doge_price)
-plt.yscale("log")
+plt.yscale('log')
 plt.legend(['Bitcoin','Etherium','Cardano','Ripple','Doge'])
+plt.title('Crypto currency prices')
+
 
 
 ##############################################################################
@@ -161,8 +183,8 @@ plt.plot(scaled_prices.date,scaled_prices.eth_price)
 plt.plot(scaled_prices.date,scaled_prices.ada_price)
 plt.plot(scaled_prices.date,scaled_prices.xrp_price)
 plt.plot(scaled_prices.date,scaled_prices.doge_price)
-plt.yscale("log")
 plt.legend(['Bitcoin','Etherium','Cardano','Ripple','Doge'])
+plt.title('Cryptocurrency prices - Scaled then normalized')
 #Findings- All crypto currencies seem to be correlated in some way but XRP and DOGE has some Change
 #that are different from the others lets dig deeper
 
@@ -217,11 +239,3 @@ plt.show()
 
 
 combined_prices.head(5)
-
-plt.figure(figsize = (20,10))
-plt.bar(combined_prices.date,combined_prices.btc_pct_chng)
-plt.bar(combined_prices.date,combined_prices.eth_pct_chng)
-plt.bar(combined_prices.date,combined_prices.ada_pct_chng)
-plt.bar(combined_prices.date,combined_prices.xrp_pct_chng)
-plt.bar(combined_prices.date,combined_prices.doge_pct_chng)
-plt.legend(['Bitcoin','Etherium','Cardano','Ripple','Doge'])
