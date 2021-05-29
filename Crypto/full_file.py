@@ -144,7 +144,6 @@ plt.plot(combined_prices.date,combined_prices.eth_price)
 plt.plot(combined_prices.date,combined_prices.ada_price)
 plt.plot(combined_prices.date,combined_prices.xrp_price)
 plt.plot(combined_prices.date,combined_prices.doge_price)
-plt.yscale('log')
 plt.legend(['Bitcoin','Etherium','Cardano','Ripple','Doge'])
 plt.title('Crypto currency prices')
 
@@ -193,7 +192,8 @@ plt.title('Cryptocurrency prices - Scaled then normalized')
 ##############################################################################
 
 #Setting up correlation and creating a Heatmap
-crypto_corr = scaled_prices.corr(method = 'pearson').round(2)
+plt.figure(figsize = (10,10))
+crypto_corr = combined_prices_index.corr(method = 'pearson').round(2)
 sns.heatmap(data = crypto_corr,
             cmap = 'inferno',
             square = True,
@@ -204,7 +204,6 @@ sns.heatmap(data = crypto_corr,
 plt.title("""
 Linear Correlation Heatmap for cryto currency prices
 """)
-
 plt.show()
 
 #findings - XRP and doge are least correlated to BTC
