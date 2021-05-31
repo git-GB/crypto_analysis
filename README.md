@@ -15,7 +15,7 @@ ________________________________________________________________________________
 * **crypto_data_processing.ipynb** - *Contains code for cleaning and processing crypto \
                                       currency data from YAHOO FINANCE. The steps i followed to create crypto_processor function*
 
-* **full_file** - *This is the main python script that will combine all the other scripts*
+* **full_file** - *This is the main python script for the analysis*
 ____________________________________________________________________________________________________________________________________________________________________
 ### **TASK LIST** -
 - [x] importing and cleaning
