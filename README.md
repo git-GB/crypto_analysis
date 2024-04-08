@@ -3,9 +3,6 @@ ________________________________________________________________________________
 **My current potfolio includes ETH, DOGE, EOS, ADA, BTC, XRP**
 **This project aims to analyze my portfolio as well as the market**
 
-**This link contains the analysis-**
-https://govindbhatdata.wixsite.com/portfolio/post/cryptocurrency-analysis
-
 ____________________________________________________________________________________________________________________________________________________________________
 
 ### **FILES:-**
